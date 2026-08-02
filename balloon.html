@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Balloon Exercise</title>
+</head>
+<body>
+
+<p id="balloon">🎈</p>
+
+<script>
+  const balloon = document.getElementById("balloon");
+
+  let size = 20; // Starting font size in pixels
+
+  function updateBalloon() {
+    balloon.style.fontSize = size + "px";
+  }
+
+  // Set the initial size
+  updateBalloon();
+
+  function handleKey(event) {
+    if (event.key === "ArrowUp") {
+      event.preventDefault();
+      size *= 1.1;
+
+      if (size > 100) {
+        balloon.textContent = "💥";
+        document.removeEventListener("keydown", handleKey);
+        return;
+      }
+
+      updateBalloon();
+    }
+
+    if (event.key === "ArrowDown") {
+      event.preventDefault();
+      size *= 0.9;
+      updateBalloon();
+    }
+  }
+
+  document.addEventListener("keydown", handleKey);
+</script>
+
+</body>
+</html>
