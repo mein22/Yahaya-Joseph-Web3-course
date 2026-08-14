@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+
+  font-family: Arial, sans-serif;
+  background: #f3f4f6;
+  color: #111827;
+}
+
+.calculator {
+  width: 100%;
+  max-width: 450px;
+  padding: 35px;
+
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+.icon {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 20px;
+
+  font-size: 28px;
+  background: #eef2ff;
+  border-radius: 14px;
+}
+
+h1 {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  color: #6b7280;
+  margin-bottom: 30px;
+}
+
+.form-group {
+  margin-bottom: 22px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+input {
+  width: 100%;
+  padding: 14px 15px;
+
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+
+  font-size: 16px;
+  outline: none;
+}
+
+input:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+small {
+  display: block;
+  margin-top: 7px;
+  color: #9ca3af;
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+.input-wrapper input {
+  padding-right: 70px;
+}
+
+.input-wrapper span {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  color: #6b7280;
+  font-weight: 600;
+}
+
+.result {
+  margin-top: 30px;
+  padding: 25px;
+
+  text-align: center;
+
+  background: #f5f3ff;
+  border-radius: 15px;
+}
+
+.result p {
+  margin-bottom: 8px;
+  color: #6b7280;
+}
+
+.result h2 {
+  margin-bottom: 8px;
+  font-size: 30px;
+  color: #4f46e5;
+}
+
+.result span {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 12px;
+
+  margin-top: 25px;
+  padding-top: 20px;
+
+  border-top: 1px solid #e5e7eb;
+}
+
+.info span {
+  color: #6b7280;
+}
+
+.info strong {
+  text-align: right;
+}
+
+@media (max-width: 480px) {
+  .calculator {
+    padding: 25px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  .result h2 {
+    font-size: 25px;
+  }
+}
